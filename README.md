@@ -1,255 +1,306 @@
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Haute Cuisine Advisors</title>
+  <meta name="description" content="Transformamos ideas en experiencias culinarias únicas. Consultoría gastronómica profesional para restaurantes, hoteles, bares y más.">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Fuentes y estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Librería de íconos FontAwesome -->
-  <script src="https://kit.fontawesome.com/3c4d2d3a5f.js" crossorigin="anonymous"></script>
-
-  <style>
-    :root {
-      --crema: #fdfcf9;
-      --arena: #e0c097;
-      --blanco: #ffffff;
-      --negro: #111111;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: var(--crema);
-      color: var(--negro);
-    }
-
-    header {
-      background: url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d?fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: var(--blanco);
-      text-align: center;
-      padding: 100px 20px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    header img {
-      width: 120px;
-      margin-bottom: 20px;
-      animation: slideDown 1.5s ease-in-out;
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      color: var(--arena);
-      margin-bottom: 20px;
-    }
-
-    .btn-contacto {
-      background: var(--arena);
-      color: var(--negro);
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn-contacto:hover {
-      background: var(--blanco);
-      color: var(--negro);
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-      animation: fadeInUp 1.5s ease-in-out;
-    }
-
-    section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      border-left: 6px solid var(--arena);
-      padding-left: 10px;
-      font-family: 'Playfair Display', serif;
-    }
-
-    section p {
-      font-size: 1.1em;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .servicios {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .card {
-      flex: 1 1 30%;
-      background: var(--blanco);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-    }
-
-    .card i {
-      font-size: 2.5em;
-      color: var(--arena);
-      margin-bottom: 15px;
-    }
-
-    .casos, .testimonios {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
-
-    .testimonio {
-      background: var(--blanco);
-      padding: 20px;
-      border-left: 4px solid var(--arena);
-      border-radius: 5px;
-    }
-
-    footer {
-      background: var(--negro);
-      color: var(--blanco);
-      text-align: center;
-      padding: 30px;
-    }
-
-    footer .social-icons i {
-      margin: 0 10px;
-      font-size: 1.5em;
-      color: var(--arena);
-      transition: 0.3s;
-    }
-
-    footer .social-icons i:hover {
-      color: var(--blanco);
-    }
-
-    /* Animaciones */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-  </style>
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-<!-- HERO -->
-<header>
-  <img src="logo.png" alt="Logo Haute Cuisine Advisors">
-  <h1>Haute Cuisine Advisors</h1>
-  <p>Transformamos ideas en experiencias culinarias únicas</p>
-  <a href="#contacto" class="btn-contacto">Contáctanos</a>
-</header>
-
-<!-- QUIÉNES SOMOS -->
-<section>
-  <h2>Quiénes Somos</h2>
-  <p>Somos una consultora gastronómica integral que impulsa el éxito de negocios de alimentos y bebidas en México. Ofrecemos estrategias innovadoras que combinan creatividad, rentabilidad y excelencia operativa.</p>
-</section>
-
-<!-- SERVICIOS -->
-<section>
-  <h2>Servicios</h2>
-  <div class="servicios">
-    <div class="card">
-      <i class="fas fa-utensils"></i>
-      <h3>Creación de Conceptos</h3>
-      <p>Desarrollamos conceptos únicos y diferenciadores que conectan con tus clientes.</p>
+  <!-- HEADER -->
+  <header class="hero">
+    <nav>
+      <img src="logo.png" alt="Logo Haute Cuisine Advisors" class="logo">
+      <ul>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="hero-text">
+      <h1>Haute Cuisine Advisors</h1>
+      <p>Transformamos ideas en experiencias culinarias únicas</p>
+      <a href="#contacto" class="btn">Agenda tu asesoría</a>
     </div>
-    <div class="card">
-      <i class="fas fa-book"></i>
-      <h3>Manuales y Capacitación</h3>
-      <p>Implementamos procesos y entrenamientos para elevar la calidad del servicio.</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-chart-line"></i>
-      <h3>Optimización</h3>
-      <p>Escandallos, control de costos y estrategias para maximizar la rentabilidad.</p>
-    </div>
-  </div>
-</section>
+  </header>
 
-<!-- CASOS DE ÉXITO -->
-<section>
-  <h2>Casos de Éxito</h2>
-  <div class="casos">
-    <div>
-      <h3>Beef Master – Cabo San Lucas</h3>
-      <p>Transformamos un negocio familiar de cortes al carbón en un destino culinario de referencia dentro del Container Park, atrayendo tanto locales como turistas.</p>
-    </div>
-    <div>
-      <h3>Luna de Sal – Cocina de Autor Costera</h3>
-      <p>Desarrollamos un proyecto integral con menú, capacitación, manuales y estrategia de marketing para un concepto ficticio que demuestra nuestro alcance y profesionalismo.</p>
-    </div>
-  </div>
-</section>
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="section">
+    <h2>¿Quiénes somos?</h2>
+    <p>Somos una consultora gastronómica especializada en transformar conceptos culinarios en negocios exitosos. Con experiencia en restaurantes, bares, hoteles y proyectos gastronómicos, ayudamos a nuestros clientes a crecer, innovar y destacar.</p>
+  </section>
 
-<!-- TESTIMONIOS -->
-<section>
-  <h2>Testimonios</h2>
-  <div class="testimonios">
-    <div class="testimonio">
-      <p>"Gracias a Haute Cuisine Advisors logramos profesionalizar nuestro restaurante y aumentar nuestras ventas en un 40% en menos de 6 meses."</p>
-      <strong>- Cliente Restaurante</strong>
+  <!-- SERVICIOS -->
+  <section id="servicios" class="section bg-light">
+    <h2>Servicios</h2>
+    <div class="services">
+      <div class="card">
+        <i class="fa-solid fa-utensils"></i>
+        <h3>Consultoría de Restaurantes</h3>
+        <p>Desde la creación de menús hasta la optimización de costos y operación diaria.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-clipboard-list"></i>
+        <h3>Capacitación</h3>
+        <p>Entrenamiento profesional de equipos en servicio, cocina y hospitalidad.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-lightbulb"></i>
+        <h3>Conceptualización</h3>
+        <p>Desarrollamos ideas innovadoras y memorables para negocios gastronómicos.</p>
+      </div>
     </div>
-    <div class="testimonio">
-      <p>"Su equipo entiende la industria gastronómica y sabe cómo convertir ideas en proyectos exitosos."</p>
-      <strong>- Socio Empresarial</strong>
+  </section>
+
+  <!-- CLIENTES / ÉXITOS -->
+  <section id="clientes" class="section">
+    <h2>Historias de Éxito</h2>
+    <div class="testimonials">
+      <blockquote>
+        “Gracias a Haute Cuisine Advisors, logramos relanzar nuestro restaurante Beef Master y duplicar la asistencia en menos de 3 meses.”  
+        <span>- Cliente: Beef Master, Cabo San Lucas</span>
+      </blockquote>
+      <blockquote>
+        “Su visión nos ayudó a crear un concepto único para nuestro hotel boutique. ¡Los recomendaríamos una y mil veces!”  
+        <span>- Hotel Boutique</span>
+      </blockquote>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACTO -->
-<section id="contacto">
-  <h2>Contacto</h2>
-  <p><i class="fas fa-envelope"></i> haute_cuisine@hotmail.com</p>
-  <p><i class="fas fa-phone"></i> +52 624 138 4078</p>
-</section>
+  <!-- CONTACTO -->
+  <section id="contacto" class="section bg-light">
+    <h2>Contáctanos</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Tu Nombre" required>
+      <input type="email" placeholder="Tu Correo" required>
+      <textarea placeholder="Tu Mensaje" required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+    <div class="socials">
+      <a href="https://www.facebook.com/Haute_cuisineMX" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/Haute_cuisineMX" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:haute_cuisine@hotmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>&copy; 2025 Haute Cuisine Advisors | Todos los derechos reservados</p>
-  <div class="social-icons">
-    <a href="https://instagram.com/Haute_cuisineMX" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://wa.me/526241384078" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  </div>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Haute Cuisine Advisors | Todos los derechos reservados</p>
+  </footer>
+
+  <!-- BOTÓN WHATSAPP -->
+  <a href="https://wa.me/526241384078?text=Hola%20Haute%20Cuisine%20Advisors%2C%20me%20gustaría%20más%20información%20sobre%20sus%20servicios." 
+     class="whatsapp-float" target="_blank">
+     <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
+
+/* Fuentes y estilos globales */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+.hero {
+  background: url('assets/hero.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  text-align: center;
+}
+
+.hero nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.hero nav a {
+  color: white;
+  font-weight: 600;
+}
+
+.hero-text {
+  margin-bottom: 100px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  animation: fadeInDown 1.5s ease;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  animation: fadeInUp 2s ease;
+}
+
+.btn {
+  background: #000;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+/* SECCIONES */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.bg-light {
+  background: #f9f9f9;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card i {
+  font-size: 2rem;
+  color: #b59f5b;
+  margin-bottom: 10px;
+}
+
+/* TESTIMONIOS */
+.testimonials {
+  display: grid;
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+blockquote {
+  background: #fff;
+  padding: 20px;
+  border-left: 5px solid #b59f5b;
+  font-style: italic;
+  border-radius: 5px;
+}
+
+/* CONTACTO */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #b59f5b;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px #999;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-float:hover {
+  background-color: #20b857;
+}
+
+/* ANIMACIONES */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
