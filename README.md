@@ -1,4 +1,3 @@
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -15,8 +14,9 @@ a { text-decoration:none; color:inherit; }
 .container { width:90%; max-width:1200px; margin:0 auto; }
 
 /* Hero / Inicio con Parallax */
-header { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; background: url('ruta_a_tu_imagen_hero.jpg') center/cover no-repeat fixed; text-align:center; position:relative; color:#fff; overflow:hidden; }
+header { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; background: url('assets/hero.jpg') center/cover no-repeat fixed; text-align:center; position:relative; color:#fff; overflow:hidden; }
 header::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); }
+header img { width:180px; margin-bottom:20px; z-index:1; }
 header h1, header p { opacity:0; transform:translateY(50px); }
 header h1 { font-size:3rem; z-index:1; animation: fadeInUp 2s forwards; }
 header p { font-size:1.3rem; margin-top:1rem; z-index:1; animation: fadeInUp 2.5s forwards; }
@@ -75,6 +75,7 @@ footer .socials a:hover { color:#c2a67a; }
 
 <!-- Hero / Inicio -->
 <header>
+    <img src="assets/logo.png" alt="Logo Haute Cuisine Advisors">
     <h1>Haute Cuisine Advisors</h1>
     <p>Transformamos ideas en experiencias culinarias únicas</p>
     <button class="btn-hero" onclick="window.location.href='#contacto'">Contáctanos</button>
@@ -84,6 +85,7 @@ footer .socials a:hover { color:#c2a67a; }
 <section id="sobre">
     <h2>Sobre Nosotros</h2>
     <p>En <strong>Haute Cuisine Advisors</strong> combinamos pasión, creatividad y estrategia para transformar restaurantes y proyectos gastronómicos en experiencias inolvidables. Nuestro enfoque integra innovación, eficiencia operativa y diseño de alta calidad.</p>
+    <img src="assets/cocina.jpg" alt="Equipo trabajando en cocina" style="display:block; margin:30px auto; max-width:80%; border-radius:15px;">
 </section>
 
 <!-- Misión y Visión -->
@@ -98,9 +100,9 @@ footer .socials a:hover { color:#c2a67a; }
     <h2>La Importancia de la Consultoría Gastronómica</h2>
     <p>La consultoría gastronómica profesional permite:</p>
     <div class="grid">
-        <div class="card"><img src="ruta_a_imagen1.jpg" alt="Optimización de Menús"><p>Optimización de Menús: Mejoramos la selección y presentación de tus platillos.</p></div>
-        <div class="card"><img src="ruta_a_imagen2.jpg" alt="Capacitación de Personal"><p>Capacitación de Personal: Garantizamos servicio de excelencia y consistencia.</p></div>
-        <div class="card"><img src="ruta_a_imagen3.jpg" alt="Diseño y Branding"><p>Diseño y Branding: Creamos una imagen coherente y atractiva para tus clientes.</p></div>
+        <div class="card"><img src="assets/gestion.jpg" alt="Optimización de Menús"><p>Optimización de Menús: Mejoramos la selección y presentación de tus platillos.</p></div>
+        <div class="card"><img src="assets/cocina.jpg" alt="Capacitación de Personal"><p>Capacitación de Personal: Garantizamos servicio de excelencia y consistencia.</p></div>
+        <div class="card"><img src="assets/logo.png" alt="Diseño y Branding"><p>Diseño y Branding: Creamos una imagen coherente y atractiva para tus clientes.</p></div>
     </div>
 </section>
 
@@ -108,9 +110,9 @@ footer .socials a:hover { color:#c2a67a; }
 <section id="servicios">
     <h2>Nuestros Servicios</h2>
     <div class="grid">
-        <div class="card"><img src="ruta_a_servicio1.jpg" alt="Consultoría Integral"><p><strong>Consultoría Integral:</strong> Análisis completo del negocio y estrategias personalizadas para mejorar cada aspecto operativo y comercial.</p></div>
-        <div class="card"><img src="ruta_a_servicio2.jpg" alt="Planificación de Proyectos"><p><strong>Planificación de Proyectos:</strong> Desarrollo de proyectos de apertura, expansión o rediseño de conceptos gastronómicos.</p></div>
-        <div class="card"><img src="ruta_a_servicio3.jpg" alt="Marketing Gastronómico"><p><strong>Marketing Gastronómico:</strong> Estrategias para posicionar tu marca, atraer clientes y aumentar la visibilidad digital y presencial.</p></div>
+        <div class="card"><img src="assets/hero.jpg" alt="Consultoría Integral"><p><strong>Consultoría Integral:</strong> Análisis completo del negocio y estrategias personalizadas.</p></div>
+        <div class="card"><img src="assets/gestion.jpg" alt="Planificación de Proyectos"><p><strong>Planificación de Proyectos:</strong> Desarrollo de proyectos de apertura y expansión.</p></div>
+        <div class="card"><img src="assets/cocina.jpg" alt="Marketing Gastronómico"><p><strong>Marketing Gastronómico:</strong> Estrategias para posicionar tu marca y atraer clientes.</p></div>
     </div>
 </section>
 
@@ -118,9 +120,9 @@ footer .socials a:hover { color:#c2a67a; }
 <section id="portafolio">
     <h2>Portafolio de Proyectos</h2>
     <div class="grid">
-        <div class="card"><img src="ruta_a_proyecto1.jpg" alt="Proyecto 1"><p>Proyecto Simulado: Diseño completo de restaurante de cocina costera de autor.</p></div>
-        <div class="card"><img src="ruta_a_proyecto2.jpg" alt="Proyecto 2"><p>Optimización de operaciones y menú para un restaurante de cortes.</p></div>
-        <div class="card"><img src="ruta_a_proyecto3.jpg" alt="Proyecto 3"><p>Planificación de preapertura y estrategia de marketing para nuevo concepto gastronómico.</p></div>
+        <div class="card"><img src="assets/cocina.jpg" alt="Proyecto 1"><p>Proyecto Simulado: Diseño completo de restaurante de cocina costera de autor.</p></div>
+        <div class="card"><img src="assets/gestion.jpg" alt="Proyecto 2"><p>Optimización de operaciones y menú para un restaurante de cortes.</p></div>
+        <div class="card"><img src="assets/hero.jpg" alt="Proyecto 3"><p>Planificación de preapertura y estrategia de marketing.</p></div>
     </div>
 </section>
 
@@ -145,7 +147,7 @@ footer .socials a:hover { color:#c2a67a; }
 </section>
 
 <!-- Botón flotante WhatsApp -->
-<div class="whatsapp" onclick="window.open('https://wa.me/5241384078','_blank')">📞</div>
+<div class="whatsapp" onclick="window.open('https://wa.me/5241384078','_blank')">💬</div>
 
 <!-- Footer -->
 <footer>
@@ -157,7 +159,7 @@ footer .socials a:hover { color:#c2a67a; }
     </div>
 </footer>
 
-<!-- Animaciones al scroll y texto en cascada -->
+<!-- Animaciones al scroll -->
 <script>
 const observer = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
