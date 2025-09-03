@@ -1,119 +1,175 @@
 
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Haute Cuisine Advisors</title>
-  <meta name="description" content="Transformamos ideas en experiencias culinarias únicas. Consultoría gastronómica profesional para restaurantes, hoteles, bares y más.">
-  <link rel="icon" href="assets/logo.png" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haute Cuisine Advisors</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Reset y tipografía */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Montserrat', sans-serif; line-height:1.6; color:#111; background-color:#fff; scroll-behavior:smooth; overflow-x:hidden; }
+a { text-decoration:none; color:inherit; }
 
-  <!-- Fuentes y estilos -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+/* Contenedores */
+.container { width:90%; max-width:1200px; margin:0 auto; }
 
-  <!-- Iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+/* Hero / Inicio con Parallax */
+header { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; background: url('ruta_a_tu_imagen_hero.jpg') center/cover no-repeat fixed; text-align:center; position:relative; color:#fff; overflow:hidden; }
+header::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); }
+header h1, header p { opacity:0; transform:translateY(50px); }
+header h1 { font-size:3rem; z-index:1; animation: fadeInUp 2s forwards; }
+header p { font-size:1.3rem; margin-top:1rem; z-index:1; animation: fadeInUp 2.5s forwards; }
+.btn-hero { margin-top:2rem; padding:0.8rem 2rem; background:#c2a67a; color:#fff; border:none; border-radius:5px; cursor:pointer; transition:0.3s; z-index:1; position:relative; font-weight:700; opacity:0; transform:translateY(50px); animation: fadeInUp 3s forwards; }
+.btn-hero:hover { background:#a68b5a; transform: scale(1.08); }
+
+/* Secciones */
+section { padding:100px 0; position:relative; }
+section:nth-of-type(even) { background:#f8f4ef; }
+section h2 { text-align:center; font-size:2.5rem; margin-bottom:50px; color:#111; position:relative; opacity:0; transform:translateY(50px); }
+section h2::after { content:""; width:80px; height:4px; background:#c2a67a; display:block; margin:10px auto 0; border-radius:2px; }
+
+/* Textos */
+section p { max-width:800px; margin:0 auto 30px; text-align:center; color:#333; font-size:1.1rem; opacity:0; transform:translateY(50px); }
+
+/* Grid avanzado para servicios y portafolio */
+.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:40px; margin-top:50px; }
+.card { background:#fff; padding:20px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:0.5s; overflow:hidden; position:relative; opacity:0; transform: translateY(50px); cursor:pointer; }
+.card img { width:100%; border-radius:15px; transition:0.5s; }
+.card p { margin-top:15px; text-align:center; font-weight:600; }
+.card:hover { transform: translateY(-15px) scale(1.03); box-shadow:0 15px 35px rgba(0,0,0,0.2); }
+.card:hover img { transform: scale(1.1); filter: brightness(0.85); }
+
+/* Testimonios estilo revista */
+.testimonial { background:#c2a67a; color:#fff; padding:50px 30px; border-radius:15px; margin:20px; text-align:center; font-size:1.1rem; line-height:1.5; font-style:italic; opacity:0; transform: translateY(50px); transition:0.5s; position:relative; cursor:default; }
+.testimonial::before { content:"“"; font-size:3rem; position:absolute; left:20px; top:-10px; opacity:0.2; }
+
+/* Contacto */
+form { max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:20px; }
+input, textarea { padding:15px; border:1px solid #ccc; border-radius:10px; width:100%; font-size:1rem; transition:0.3s; }
+input:focus, textarea:focus { border-color:#c2a67a; outline:none; }
+button { padding:0.8rem 2rem; background:#111; color:#fff; border:none; border-radius:10px; cursor:pointer; font-weight:600; transition:0.3s; }
+button:hover { background:#333; transform: scale(1.08); }
+
+/* Botón flotante WhatsApp */
+.whatsapp { position:fixed; bottom:30px; right:30px; background:#25D366; color:#fff; width:70px; height:70px; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:32px; box-shadow:0 8px 16px rgba(0,0,0,0.3); z-index:100; cursor:pointer; transition:0.3s; }
+.whatsapp:hover { transform:scale(1.2); }
+
+/* Animaciones */
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@keyframes fadeInUp { from {opacity:0; transform:translateY(50px);} to {opacity:1; transform:translateY(0);} }
+
+/* Footer */
+footer { text-align:center; padding:40px 0; background:#111; color:#fff; }
+footer .socials a { margin:0 15px; color:#fff; font-size:1.8rem; transition:0.3s; }
+footer .socials a:hover { color:#c2a67a; }
+
+/* Responsive */
+@media(max-width:768px){
+    header h1 { font-size:2.2rem; }
+    section h2 { font-size:2rem; }
+}
+</style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="hero">
-    <nav>
-      <img src="assets/logo.png" alt="Logo Haute Cuisine Advisors" class="logo">
-      <ul>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#clientes">Clientes</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-    <div class="hero-text">
-      <h1>Haute Cuisine Advisors</h1>
-      <p>Transformamos ideas en experiencias culinarias únicas</p>
-      <a href="#contacto" class="btn">Agenda tu asesoría</a>
+
+<!-- Hero / Inicio -->
+<header>
+    <h1>Haute Cuisine Advisors</h1>
+    <p>Transformamos ideas en experiencias culinarias únicas</p>
+    <button class="btn-hero" onclick="window.location.href='#contacto'">Contáctanos</button>
+</header>
+
+<!-- Introducción / Sobre Nosotros -->
+<section id="sobre">
+    <h2>Sobre Nosotros</h2>
+    <p>En <strong>Haute Cuisine Advisors</strong> combinamos pasión, creatividad y estrategia para transformar restaurantes y proyectos gastronómicos en experiencias inolvidables. Nuestro enfoque integra innovación, eficiencia operativa y diseño de alta calidad.</p>
+</section>
+
+<!-- Misión y Visión -->
+<section id="misionvision">
+    <h2>Misión y Visión</h2>
+    <p><strong>Misión:</strong> Transformar ideas culinarias en experiencias únicas, elevando la calidad, la rentabilidad y la satisfacción del cliente.</p>
+    <p><strong>Visión:</strong> Ser la consultoría gastronómica líder en México, reconocida por innovación, profesionalismo y resultados extraordinarios.</p>
+</section>
+
+<!-- Importancia Consultoría -->
+<section id="importancia">
+    <h2>La Importancia de la Consultoría Gastronómica</h2>
+    <p>La consultoría gastronómica profesional permite:</p>
+    <div class="grid">
+        <div class="card"><img src="ruta_a_imagen1.jpg" alt="Optimización de Menús"><p>Optimización de Menús: Mejoramos la selección y presentación de tus platillos.</p></div>
+        <div class="card"><img src="ruta_a_imagen2.jpg" alt="Capacitación de Personal"><p>Capacitación de Personal: Garantizamos servicio de excelencia y consistencia.</p></div>
+        <div class="card"><img src="ruta_a_imagen3.jpg" alt="Diseño y Branding"><p>Diseño y Branding: Creamos una imagen coherente y atractiva para tus clientes.</p></div>
     </div>
-  </header>
+</section>
 
-  <!-- NOSOTROS -->
-  <section id="nosotros" class="section">
-    <h2>¿Quiénes somos?</h2>
-    <p>Somos una consultora gastronómica especializada en transformar conceptos culinarios en negocios exitosos. Con experiencia en restaurantes, bares, hoteles y proyectos gastronómicos, ayudamos a nuestros clientes a crecer, innovar y destacar.</p>
-  </section>
-
-  <!-- SERVICIOS -->
-  <section id="servicios" class="section bg-light">
-    <h2>Servicios</h2>
-    <div class="services">
-      <div class="card">
-        <img src="assets/servicio1.jpg" alt="Consultoría de Restaurantes">
-        <h3>Consultoría de Restaurantes</h3>
-        <p>Desde la creación de menús hasta la optimización de costos y operación diaria.</p>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-clipboard-list"></i>
-        <h3>Capacitación</h3>
-        <p>Entrenamiento profesional de equipos en servicio, cocina y hospitalidad.</p>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-lightbulb"></i>
-        <h3>Conceptualización</h3>
-        <p>Desarrollamos ideas innovadoras y memorables para negocios gastronómicos.</p>
-      </div>
+<!-- Servicios -->
+<section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="grid">
+        <div class="card"><img src="ruta_a_servicio1.jpg" alt="Consultoría Integral"><p><strong>Consultoría Integral:</strong> Análisis completo del negocio y estrategias personalizadas para mejorar cada aspecto operativo y comercial.</p></div>
+        <div class="card"><img src="ruta_a_servicio2.jpg" alt="Planificación de Proyectos"><p><strong>Planificación de Proyectos:</strong> Desarrollo de proyectos de apertura, expansión o rediseño de conceptos gastronómicos.</p></div>
+        <div class="card"><img src="ruta_a_servicio3.jpg" alt="Marketing Gastronómico"><p><strong>Marketing Gastronómico:</strong> Estrategias para posicionar tu marca, atraer clientes y aumentar la visibilidad digital y presencial.</p></div>
     </div>
-  </section>
+</section>
 
-  <!-- CLIENTES / ÉXITOS -->
-  <section id="clientes" class="section">
-    <h2>Historias de Éxito</h2>
-    <div class="testimonials">
-      <blockquote>
-        <img src="assets/logo.png" alt="Beef Master" class="testimonial-img">
-        “Gracias a Haute Cuisine Advisors, logramos relanzar nuestro restaurante Beef Master y duplicar la asistencia en menos de 3 meses.”  
-        <span>- Cliente: Beef Master, Cabo San Lucas</span>
-      </blockquote>
-      <blockquote>
-        <img src="assets/logo.png" alt="Hotel Boutique" class="testimonial-img">
-        “Su visión nos ayudó a crear un concepto único para nuestro hotel boutique. ¡Los recomendaríamos una y mil veces!”  
-        <span>- Hotel Boutique</span>
-      </blockquote>
+<!-- Portafolio -->
+<section id="portafolio">
+    <h2>Portafolio de Proyectos</h2>
+    <div class="grid">
+        <div class="card"><img src="ruta_a_proyecto1.jpg" alt="Proyecto 1"><p>Proyecto Simulado: Diseño completo de restaurante de cocina costera de autor.</p></div>
+        <div class="card"><img src="ruta_a_proyecto2.jpg" alt="Proyecto 2"><p>Optimización de operaciones y menú para un restaurante de cortes.</p></div>
+        <div class="card"><img src="ruta_a_proyecto3.jpg" alt="Proyecto 3"><p>Planificación de preapertura y estrategia de marketing para nuevo concepto gastronómico.</p></div>
     </div>
-  </section>
+</section>
 
-  <!-- GALERÍA -->
-  <section id="galeria" class="section bg-light">
-    <h2>Galería de Proyectos</h2>
-    <div class="gallery">
-      <img src="assets/hero.jpg" alt="Consultoría en acción">
-      <img src="assets/servicio1.jpg" alt="Gestión de restaurantes">
+<!-- Testimonios -->
+<section id="testimonios">
+    <h2>Testimonios</h2>
+    <div class="grid">
+        <div class="testimonial">"Haute Cuisine Advisors transformó completamente nuestro restaurante, aumentando nuestras ventas y mejorando la experiencia del cliente."</div>
+        <div class="testimonial">"La asesoría fue profesional, clara y efectiva. Recomiendo ampliamente sus servicios."</div>
     </div>
-  </section>
+</section>
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="section">
-    <h2>Contáctanos</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Tu Nombre" required>
-      <input type="email" placeholder="Tu Correo" required>
-      <textarea placeholder="Tu Mensaje" required></textarea>
-      <button type="submit" class="btn">Enviar</button>
+<!-- Contacto -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <form>
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo" required>
+        <textarea placeholder="Mensaje" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
     </form>
+</section>
+
+<!-- Botón flotante WhatsApp -->
+<div class="whatsapp" onclick="window.open('https://wa.me/5241384078','_blank')">📞</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Haute Cuisine Advisors</p>
     <div class="socials">
-      <a href="https://www.facebook.com/Haute_cuisineMX" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com/Haute_cuisineMX" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:haute_cuisine@hotmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.instagram.com/Haute_cuisineMX" target="_blank">📷</a>
+        <a href="https://www.facebook.com/HauteCuisineAdvisors" target="_blank">📘</a>
+        <a href="mailto:Ivbermudez@hotmail.com">✉️</a>
     </div>
-  </section>
+</footer>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Haute Cuisine Advisors | Todos los derechos reservados</p>
-  </footer>
+<!-- Animaciones al scroll y texto en cascada -->
+<script>
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+},{threshold:0.1});
 
-  <!-- BOTÓN WHATSAPP -->
-  <a href="https://wa.me/526241842775?text=Hola%20Haute%20Cuisine%20Advisors%2C%20me%20gustaría%20más%20información%20sobre%20sus%20servicios." 
-     class="whatsapp-float" target="_blank">
-     <i class="fab fa-whatsapp"></i>
-  </a>
+document.querySelectorAll('section h2, section p, .card, .testimonial, .btn-hero').forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>
