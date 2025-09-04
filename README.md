@@ -154,7 +154,7 @@ footer .socials a:hover { color:#c2a67a; }
     <p>© 2025 Haute Cuisine Advisors</p>
     <div class="socials">
         <a href="https://www.instagram.com/Haute_cuisineMX" target="_blank">📷</a>
-        <a href="https://www.facebook.com/HauteCuisineAdvisors" target="_blank">📘</a>
+        <a href="https://www.facebook.com/share/15qjaQCbXQ/?mibextid=wwXIfr" target="_blank">📘</a>
         <a href="mailto:haute.cuisineadv@gmail.com">✉️</a>
     </div>
 </footer>
