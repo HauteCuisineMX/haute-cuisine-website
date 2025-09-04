@@ -147,7 +147,7 @@ footer .socials a:hover { color:#c2a67a; }
 </section>
 
 <!-- Botón flotante WhatsApp -->
-<div class="whatsapp" onclick="window.open('https://wa.me/5241384078','_blank')">💬</div>
+<div class="whatsapp" onclick="window.open('https://wa.me/526241847225','_blank')">💬</div>
 
 <!-- Footer -->
 <footer>
@@ -155,7 +155,7 @@ footer .socials a:hover { color:#c2a67a; }
     <div class="socials">
         <a href="https://www.instagram.com/Haute_cuisineMX" target="_blank">📷</a>
         <a href="https://www.facebook.com/HauteCuisineAdvisors" target="_blank">📘</a>
-        <a href="mailto:Ivbermudez@hotmail.com">✉️</a>
+        <a href="mailto:haute.cuicineadv@gmail.com">✉️</a>
     </div>
 </footer>
 
