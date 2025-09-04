@@ -147,7 +147,7 @@ footer .socials a:hover { color:#c2a67a; }
 </section>
 
 <!-- Botón flotante WhatsApp -->
-<div class="whatsapp" onclick="window.open('https://wa.me/526241847225','_blank')">💬</div>
+<div class="whatsapp" onclick="window.open('https://wa.me/526241842775','_blank')">💬</div>
 
 <!-- Footer -->
 <footer>
