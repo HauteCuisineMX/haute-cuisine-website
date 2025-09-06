@@ -75,7 +75,7 @@ footer .socials a:hover { color:#c2a67a; }
 
 <!-- Hero / Inicio -->
 <header>
-    <img src="assets/logo.png" alt="Logo Haute Cuisine Advisors">
+    <img src="[assets/logo.png](https://drive.google.com/file/d/1MpcQMsiYDlwrre7BJLQ6p2hvTAuFqjDs" alt="Logo Haute Cuisine Advisors">
     <h1>Haute Cuisine Advisors</h1>
     <p>Transformamos ideas en experiencias culinarias únicas</p>
     <button class="btn-hero" onclick="window.location.href='#contacto'">Contáctanos</button>
@@ -85,7 +85,7 @@ footer .socials a:hover { color:#c2a67a; }
 <section id="sobre">
     <h2>Sobre Nosotros</h2>
     <p>En <strong>Haute Cuisine Advisors</strong> combinamos pasión, creatividad y estrategia para transformar restaurantes y proyectos gastronómicos en experiencias inolvidables. Nuestro enfoque integra innovación, eficiencia operativa y diseño de alta calidad.</p>
-    <img src="assets/cocina.jpg" alt="Equipo trabajando en cocina" style="display:block; margin:30px auto; max-width:80%; border-radius:15px;">
+    <img src="https://drive.google.com/file/d/1Klep4OrXVIDmiypztifnnJPk0qicT8MO" alt="Equipo trabajando en cocina" style="display:block; margin:30px auto; max-width:80%; border-radius:15px;">
 </section>
 
 <!-- Misión y Visión -->
@@ -101,7 +101,7 @@ footer .socials a:hover { color:#c2a67a; }
     <p>La consultoría gastronómica profesional permite:</p>
     <div class="grid">
         <div class="card"><img src="assets/gestion.jpg" alt="Optimización de Menús"><p>Optimización de Menús: Mejoramos la selección y presentación de tus platillos.</p></div>
-        <div class="card"><img src="assets/cocina.jpg" alt="Capacitación de Personal"><p>Capacitación de Personal: Garantizamos servicio de excelencia y consistencia.</p></div>
+        <div class="card"><img src="https://drive.google.com/file/d/1Y5KyhQxJKTL3HY34TrS9XeaH9Ka_bYm8" alt="Capacitación de Personal"><p>Capacitación de Personal: Garantizamos servicio de excelencia y consistencia.</p></div>
         <div class="card"><img src="assets/logo.png" alt="Diseño y Branding"><p>Diseño y Branding: Creamos una imagen coherente y atractiva para tus clientes.</p></div>
     </div>
 </section>
@@ -111,7 +111,7 @@ footer .socials a:hover { color:#c2a67a; }
     <h2>Nuestros Servicios</h2>
     <div class="grid">
         <div class="card"><img src="assets/hero.jpg" alt="Consultoría Integral"><p><strong>Consultoría Integral:</strong> Análisis completo del negocio y estrategias personalizadas.</p></div>
-        <div class="card"><img src="assets/gestion.jpg" alt="Planificación de Proyectos"><p><strong>Planificación de Proyectos:</strong> Desarrollo de proyectos de apertura y expansión.</p></div>
+        <div class="card"><img src="https://drive.google.com/file/d/1hvJZmnLFLZ8lBfas-7ZEloESz2gpf7LJ" alt="Planificación de Proyectos"><p><strong>Planificación de Proyectos:</strong> Desarrollo de proyectos de apertura y expansión.</p></div>
         <div class="card"><img src="assets/cocina.jpg" alt="Marketing Gastronómico"><p><strong>Marketing Gastronómico:</strong> Estrategias para posicionar tu marca y atraer clientes.</p></div>
     </div>
 </section>
